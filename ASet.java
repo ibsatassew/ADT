@@ -1,6 +1,6 @@
 /** Set ADT 
-A program to find the size of a set, check if an item is member of the set, check whether it is empty or not, 
-find the union, intersection, difference, and symmetric difference of two sets. 
+A program to find the size of a set, check if an item is a member of a given set, check whether a given set is empty or not, 
+ find the union, intersection, difference, and symmetric difference of two sets.
     @author Ibsa Tassew Geleta
 */
 
