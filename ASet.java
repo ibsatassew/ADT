@@ -1,6 +1,7 @@
 /** Set ADT 
-
-    @author
+A program to find the size of a set, check if an item is member of the set, check whether it is empty or not, 
+find the union, intersection, difference, and symmetric difference of two sets. 
+    @author Ibsa Tassew Geleta
 */
 
 class ASet<E> implements Set<E>  
@@ -28,7 +29,7 @@ class ASet<E> implements Set<E>
         return false;
    }
    /** @return true if this set is empty; false otherwise. */
-   public boolean isEmpty(){
+  public boolean isEmpty(){
    	if(size()>0){
    		return false;
    	}
@@ -50,7 +51,7 @@ class ASet<E> implements Set<E>
   
    }
    /** @return The data element of the item at position i. */
-   public E getValue(int i){
+  public E getValue(int i){
    assert (curr>=0) && (curr<setSize):
            "No current element";
     return setArray[i];
@@ -59,7 +60,7 @@ class ASet<E> implements Set<E>
       @param S another set
       @return the union of this set with S.
    */
-   public Set<E> union(Set<E> S) {
+  public Set<E> union(Set<E> S) {
    	Set<E> union = new ASet<E>();
    	for(int i = 0; i<size(); i++){
    		union.insert(setArray[i]);
@@ -76,7 +77,7 @@ class ASet<E> implements Set<E>
       @param S another set
       @return the intersection of this set with S.
    */
-   public Set<E> intersect(Set<E> S){
+  public Set<E> intersect(Set<E> S){
    Set<E> intersect = new ASet<E>();
    	for(int i = 0; i<S.size(); i++) {
    		if(contains(S.getValue(i))){
@@ -89,20 +90,20 @@ class ASet<E> implements Set<E>
       @param S another set
       @return the difference of this set with S.
    */
-   public Set<E> diff(Set<E> S) {
+  public Set<E> diff(Set<E> S) {
     Set<E> diff = new ASet<E>();
     for(int i = 0; i<setSize; i++) {
       if(!S.contains(setArray[i]))
         diff.insert(setArray[i]);
    }
-   return diff;
+    return diff;
 
   }
   /** Compute the symmetric difference of two sets.
       @param S another set
       @return the symmetric difference of this set with S.
    */
-   public Set<E> symDiff(Set<E> S) {
+  public Set<E> symDiff(Set<E> S) {
     Set<E> symDiff = new ASet<E>();
     for(int i = 0; i<setSize; i++) {
       if(!S.contains(setArray[i])){
